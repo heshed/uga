@@ -4,6 +4,7 @@ import cv2
 import pydicom
 import os.path
 import numpy as np
+import wget
 
 
 def save(src, out):
@@ -21,5 +22,10 @@ def save(src, out):
     cv2.imwrite(img_file, img)
 
 
+def download(url, output_directory):
+    filename = wget.download(url, out=output_directory)
+    return filename
+
 if __name__ == '__main__':
-    save(sys.argv[1], sys.argv[2])
+    filename = download(sys.argv[1], sys.argv[2])
+    save(filename, sys.argv[2])

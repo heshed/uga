@@ -1,3 +1,4 @@
 pydicom
 np
 opencv-python
+wget
