@@ -20,5 +20,5 @@ cd dcm
 pip install -r requirements.txt
 
 # 두번째 인자는 디렉토리
-python ./dcm.py tests/1148_DX_1.dcm ./
+python ./dcm.py http://192.168.0.100/어쩌구저쩌구/aaa.dcm ./
 ```
