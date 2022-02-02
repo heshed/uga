@@ -29,3 +29,5 @@ def download(url, output_directory):
 if __name__ == '__main__':
     filename = download(sys.argv[1], sys.argv[2])
     save(filename, sys.argv[2])
+    print('remove file... ', filename)
+    os.remove(filename)
